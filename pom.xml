@@ -38,7 +38,7 @@
       <password>Mahesh@123</password>
       <environment>Sandbox</environment>
       <applicationName>cicdjenkins</applicationName>
-      <business>MuleSoft</business>
+ 
       <workerType>Micro</workerType>
 	  <workers>1</workers>
 	  <objectstoreV2>true</objectstoreV2>
