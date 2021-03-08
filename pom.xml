@@ -42,7 +42,7 @@
       <workerType>Micro</workerType>
 	  <workers>1</workers>
 	 
-	        
+	        <trimStackTrace>false</trimStackTrace>
     </cloudHubDeployment>
     <classifier>mule-application</classifier>
 				</configuration>
