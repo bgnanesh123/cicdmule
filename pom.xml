@@ -35,8 +35,8 @@
             <muleVersion>${app.runtime}</muleVersion>
       <username>gnaneshb</username>
       <password>Mahesh@123</password>
-      <environment>sandbox</environment>
-      <workerType>Micro</workerType>
+      <environment>SANDBOX</environment>
+      <workerType>micro</workerType>
 	  <workers>1</workers>
 	  <uri>https://anypoint.mulesoft.com</uri>
 	  <applicationName>cicdjenkins</applicationName>
