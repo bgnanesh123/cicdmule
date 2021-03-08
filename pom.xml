@@ -32,20 +32,31 @@
 				<extensions>true</extensions>
 				<configuration>
 				  <cloudHubDeployment>
-				  <uri>https://anypoint.mulesoft.com</uri>
-				  <muleVersion>${mule.version}</muleVersion>
+				  <muleVersion>${app.runtime}</muleVersion>
       <username>gnaneshb</username>
       <password>Mahesh@123</password>
       <environment>Sandbox</environment>
-      <applicationName>cicdjenkins</applicationName>
- 
       <workerType>Micro</workerType>
 	  <workers>1</workers>
-	 
+	  <uri>https://anypoint.mulesoft.com</uri>
+	  <applicationName>cicdjenkins</applicationName>	 
+	
+	
 	        <trimStackTrace>false</trimStackTrace>
+   
+   
     </cloudHubDeployment>
-    <classifier>mule-application</classifier>
+
 				</configuration>
+				<executions>
+          <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+             <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
 				
 			</plugin>
 		</plugins>
