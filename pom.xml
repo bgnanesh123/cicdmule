@@ -9,15 +9,14 @@
     <packaging>mule-application</packaging>
 
 	<name>cicdjenkins</name>
-
-    <properties>
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
+		
 		<app.runtime>4.3.0-20210119</app.runtime>
 		<mule.maven.plugin.version>3.4.2</mule.maven.plugin.version>
-	</properties>
-
+		
+		/properties>
 	<build>
 		<plugins>
 			<plugin>
@@ -28,34 +27,26 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.3.5</version>
 				<extensions>true</extensions>
 				<configuration>
 				<cloudHubDeployment>
-            <muleVersion>${app.runtime}</muleVersion>
-      <username>gnaneshb</username>
-      <password>Mahesh@123</password>
-      <environment>SANDBOX</environment>
-      <workerType>micro</workerType>
-	  <workers>1</workers>
-	  <uri>https://anypoint.mulesoft.com</uri>
-	  <applicationName>cicdjenkins</applicationName>
-          </cloudHubDeployment>
-				
+			      <muleVersion>4.3.0</muleVersion>
+			      <username>gnaneshb</username>
+			      <password>Mahesh@123</password>
+			      <applicationName>cicdjenkins</applicationName>
+			      <environment>Sandbox</environment>   
+			      <workers>1</workers>
+			      <workerType>MICRO</workerType>
+			      <properties>
+				    <maven.compiler.target>1.8</maven.compiler.target>
+				    <maven.compiler.source>1.8</maven.compiler.source>
+				</properties>
+			    </cloudHubDeployment>
 				</configuration>
-		<executions>
-          <execution>
-            <id>deploy</id>
-            <phase>deploy</phase>
-            <goals>
-             <goal>deploy</goal>
-            </goals>
-          </execution>
-        </executions>
 			</plugin>
 		</plugins>
 	</build>
-
 	<dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
@@ -96,5 +87,4 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
 </project>
