@@ -42,7 +42,7 @@
 	  <applicationName>cicdjenkins</applicationName>	 
 	
 	
-	        <trimStackTrace>false</trimStackTrace>
+	     
    
    
     </cloudHubDeployment>
