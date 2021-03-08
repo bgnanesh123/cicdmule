@@ -41,7 +41,7 @@
  
       <workerType>Micro</workerType>
 	  <workers>1</workers>
-	  <objectstoreV2>true</objectstoreV2>
+	 
 	        
     </cloudHubDeployment>
     <classifier>mule-application</classifier>
